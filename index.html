@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>GreatFrontEnd Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Normal case -->
+      <article class="card">
+        <header class="card__header">
+          <div class="card__header__icon">
+            <img
+              class="card__header__img"
+              src="./img/profile-thumbnail.png"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="card__header__meta">
+            <h3
+              class="card__header__name text-lg text-neutral-900 font-semibold"
+              data-content="Sarah Dole"
+            ></h3>
+            <span
+              class="card__header__handle text-sm text-neutral-600"
+              >@sarahdole</span
+            >
+          </div>
+        </header>
+        <p
+          class="card__content text-neutral-600"
+          data-content="I've been searching for high-quality abstract images for my
+          design projects, and I'm thrilled to have found this
+          platform. The variety and depth of creativity are
+          astounding!"
+        ></p>
+      </article>
+
+      <!-- Edge case with long string handling -->
+      <article class="card">
+        <header class="card__header">
+          <div class="card__header__icon">
+            <img
+              src="./img/profile-thumbnail.png"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="card__header__meta">
+            <h3
+              class="card__header__name text-lg text-neutral-900 font-semibold"
+              data-content="Sarah Dole Sarah Dole Sarah Dole Sarah Dole Sarah Dole
+              Sarah Dole Sarah Dole Sarah Dole Sarah Dole Sarah Dole
+              Sarah Dole"
+            ></h3>
+            <span
+              class="card__header__handle text-sm text-neutral-600"
+              >@sarahdole</span
+            >
+          </div>
+        </header>
+        <!-- use data attribute for the content to avoid layout thrash during truncating -->
+        <p
+          class="card__content text-neutral-600"
+          data-content="I've been searching for high-quality abstract images for my
+        design projects, and I'm thrilled to have found this
+        platform. The variety and depth of creativity are
+        astounding! I've been searching for high-quality abstract
+        images for my design projects, and I'm thrilled to have
+        found this platform. The variety and depth of creativity are
+        astounding!"
+        ></p>
+      </article>
+    </div>
+    <div class="credits" data-gfe-screenshot-exclude="true">
+      > A challenge by
+      <a
+        href="https://www.greatfrontend.com/projects?ref=challenges"
+        target="_blank"
+        >GreatFrontEnd Projects</a
+      >. Built by
+      <a
+        href="https://www.greatfrontend.com/projects/u/qianzhong516"
+        target="_blank"
+        >qianzhong516</a
+      >.
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
