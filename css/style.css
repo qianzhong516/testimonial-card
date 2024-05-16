@@ -32,6 +32,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 1440px;
   padding: 32px;
@@ -82,10 +83,7 @@ body {
   height: var(--size);
   border-radius: 50%;
   overflow: hidden;
-}
-
-.card__header__meta {
-  flex: 200px;
+  flex-shrink: 0;
 }
 
 .card__header__img {
@@ -98,4 +96,8 @@ body {
 
 .card__content {
   cursor: default;
+}
+
+.card--centre {
+  transform: translateY(-50%);
 }
